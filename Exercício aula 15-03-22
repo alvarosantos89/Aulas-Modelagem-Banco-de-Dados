@@ -1,0 +1,23 @@
+create database aulaimepac;
+
+use database aulaimepac;
+
+create table livro(
+	livro varchar(100),
+	autor varchar(50),
+	paginas int(5),
+	editora varchar(50),
+	anopublicacao int(5),
+	valor float,
+	anocompra int(5)
+);
+
+insert into livro values('A volta dos que não foram', 'Papai Noel', '115', 'Jamelão', '1998', '87.5', '2022');
+
+insert into livro values('As Tranças da Vovó Careca', 'Xuxa', '128', 'Jamelão', '2017', '67.5', '2021');
+
+insert into livro values('Poeira em Alto Mar', 'Shibiu', '190', 'Capenga', '2012', '100', '2022');
+
+insert into livro values('Chapéu Sem Aba', 'Caguete', '155', 'Capenga', '2019', '98.7', '2022');
+
+insert into livro values('Anão de Jardim 3', 'Carlos Terceiro', '195', 'Vancete', '2012', '98.7', '2021');	
