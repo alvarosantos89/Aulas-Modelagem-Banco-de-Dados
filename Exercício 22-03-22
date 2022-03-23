@@ -1,0 +1,48 @@
+1- Crie uma query que exibe a quantidade de funcionários.
+select count(nome) from funcionarios;
+
+
+2- Crie uma query que exibe funcionários que trabalhem no departamento de filmes ou no departamento de roupas.
+select nome, departamento 
+from funcionarios
+where departamento like "%filme%"
+or departamento like "%roupa%";
+
+
+3- Quantos funcionários trabalham no departamento de filmes ou departamento de roupas.
+Total de funcionários: 74
+select count(nome) 
+from funcionarios
+where departamento like "%filme%"
+or departamento like "%roupa%";
+
+
+4- Destes, quantos são do sexo feminino?
+Total de funcionárias (feminino): 38
+
+select count(nome) 
+from funcionarios
+where sexo like "%feminino%" 
+and (departamento like "%filme%"
+or departamento like "%roupa%");
+
+
+5- Exiba a lista de funcionárias (feminino) que trabalham no departamento de lar ou de filmes, inclua o e-mail dessas profissionais na sua lista.
+select nome, email, sexo, departamento
+from funcionarios
+where sexo like "%feminino%" 
+and (departamento like "%lar%"
+or departamento like "%filme%");
+
+
+6- Exibe a quantidade de funcionários do sexo masculino.
+select count(nome)
+from funcionarios
+where sexo like "%masculino%";
+
+
+7- Exibe os funcionários do sexo masculino ou que são do setor eletrônicos.
+select nome, sexo, departamento
+from funcionarios
+where sexo like "%masculino%"
+or departamento like "%eletronico%";
